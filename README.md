@@ -1,4 +1,4 @@
-# BOLSAFAMILIA
+# Projeto de consultas a banco de dados
 
 Este projeto consiste em uma API RESTful robusta, desenvolvida para fornecer serviços de consulta de dados com alta performance e escalabilidade. O sistema utiliza uma arquitetura moderna e camadas bem definidas, garantindo facilidade na manutenção e integração com front-ends.
 
