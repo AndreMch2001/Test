@@ -1,7 +1,6 @@
 name: bolsafamilia_app
 description: "A new Flutter project."
 publish_to: 'none'
-
 version: 1.0.0+1
 
 environment:
@@ -11,21 +10,13 @@ dependencies:
   flutter:
     sdk: flutter
   cupertino_icons: ^1.0.8
-
-  #Dependências necessárias para o projeto.
-  dependencies:
-  flutter:
-    sdk: flutter
-  provider: ^6.1.1  # Gerencia o estado (seu Controller/Service do Front)
-  dio: ^5.4.0       # Faz as requisições HTTP para sua API Java
+  provider: ^6.1.1
+  dio: ^5.4.0
 
 dev_dependencies:
   flutter_test:
     sdk: flutter
-
-  flutter_lints: ^6.0.0
+  flutter_lints: ^3.0.0
 
 flutter:
-
   uses-material-design: true
-
