@@ -1,4 +1,4 @@
-# Projeto de consultas a banco de dados
+# Projeto A3 - Consultas a BigData
 
 Este projeto consiste em uma API RESTFUL robusta, desenvolvida para fornecer serviços de consulta de dados com alta performance e escalabilidade. O sistema utiliza uma arquitetura moderna e camadas bem definidas, garantindo facilidade na manutenção e integração com front-ends.
 
