@@ -1,6 +1,6 @@
 # Projeto de consultas a banco de dados
 
-Este projeto consiste em uma API RESTful robusta, desenvolvida para fornecer serviços de consulta de dados com alta performance e escalabilidade. O sistema utiliza uma arquitetura moderna e camadas bem definidas, garantindo facilidade na manutenção e integração com front-ends.
+Este projeto consiste em uma API RESTFUL robusta, desenvolvida para fornecer serviços de consulta de dados com alta performance e escalabilidade. O sistema utiliza uma arquitetura moderna e camadas bem definidas, garantindo facilidade na manutenção e integração com front-ends.
 
 ## 🗄️ Base de Dados e Infraestrutura
 
@@ -57,13 +57,32 @@ Implementação via `Page` e `PageRequest` para gerenciar grandes volumes de dad
 * Diminuir tempo de resposta (latência).
 * Evitar sobrecarga no banco de dados.
 
-## 💡 Por que escolhemos esta Stack?
+-----------------------------------------------------------------------------------------------------------------------------------------------
 
-A combinação **Spring Boot + JPA + Hibernate** foi escolhida pelos seguintes fatores:
+# Bolsa Família App
 
-* **Produtividade:** Configuração rápida e ambiente padronizado.
-* **Escalabilidade:** Arquitetura pensada para expansão futura.
-* **Manutenibilidade:** O uso de Specifications reduz drasticamente a complexidade do código de busca.
-* **Mercado:** Tecnologias consolidadas com ampla documentação e comunidade ativa.
+Aplicativo móvel desenvolvido em **Flutter (Dart)** com suporte **Android nativo (Java)**, focado em disponibilizar informações e funcionalidades relacionadas ao programa Bolsa Família.
 
----
+## ✨ Funcionalidades
+
+- Consulta de informações do programa.
+- Exibição de dados em telas amigáveis e responsivas.
+- Navegação entre páginas utilizando o ecossistema Flutter.
+- Integração com camada nativa Android (Java) quando necessário.
+
+## 🛠 Tecnologias
+
+- **Flutter** (SDK estável mais recente)
+- **Dart**
+- **Android** (projeto `android/` com código nativo em **Java**)
+- Gradle / Android Studio para build Android
+
+## ✅ Pré-requisitos
+
+- **Flutter SDK** instalado  
+  Consulte a documentação oficial: `https://docs.flutter.dev/get-started/install`
+- **Dart** (vem junto com o Flutter)
+- **Android Studio** ou **VS Code** com plugins do Flutter
+- **JDK** compatível com a versão do Android/Gradle usada no projeto
+- Dispositivo físico ou emulador Android configurado
+
