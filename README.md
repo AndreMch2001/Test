@@ -9,23 +9,12 @@ Aplicativo móvel desenvolvido em **Flutter (Dart)** com suporte **Android nativ
 - Navegação entre páginas utilizando o ecossistema Flutter.
 - Integração com camada nativa Android (Java) quando necessário.
 
-> Ajuste esta seção com as funcionalidades reais do seu app.
-
 ## 🛠 Tecnologias
 
 - **Flutter** (SDK estável mais recente)
 - **Dart**
 - **Android** (projeto `android/` com código nativo em **Java**)
 - Gradle / Android Studio para build Android
-
-## 📁 Estrutura do projeto (resumo)
-
-- `lib/` – Código principal em Flutter/Dart
-  - `views/` – Telas e widgets de UI (`page_one.dart`, etc.)
-  - (adicione aqui outros diretórios importantes: `models/`, `controllers/`, `services/`, etc.)
-- `android/` – Projeto Android nativo (configurações, Gradle, Java)
-- `ios/` – Projeto iOS (se aplicável)
-- `pubspec.yaml` – Dependências do Flutter/Dart
 
 ## ✅ Pré-requisitos
 
