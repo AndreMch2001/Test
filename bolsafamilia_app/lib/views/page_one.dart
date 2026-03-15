@@ -4,7 +4,6 @@ import '../providers/bolsa_provider.dart';
 import '../models/buscas.dart';
 
 class PageOne  extends StatefulWidget{ //classe que representa a tela de busca
-  const PageOne({super.key}); // construtor da classe desnecessário, mas é bom deixar para futuras extensões
 
   @override // poliformismo para criar o estado da tela
   _PageOneState createState() => _PageOneState(); // cria o estado da tela que será usado para controlar a tela
@@ -17,14 +16,26 @@ class _PageOneState extends State<PageOne> { // classe que representa o estado d
  GetBuscas _tipoBuscaSelecionado = GetBuscas.nomeFavorecido; // variavel que controla o tipo de busca selecionado
 
   @override
+  void initState() { // metodo que inicializa o estado da tela
+    super.initState(); // chama o metodo super para inicializar o estado da tela
+    // Listener de scroll: quando o usuário chega perto do fim da lista, carrega mais itens
+    _scrollController.addListener(() { // metodo que adiciona um listener ao scroll para carregar mais itens
+      final pos = _scrollController.position; // posição do scroll
+      if (pos.pixels >= pos.maxScrollExtent - 200) { // verifica se o usuário chegou perto do fim da lista
+        context.read<BolsaProvider>().carregarMais(); // carrega mais itens
+      }
+    });
+  } // fim do metodo initState
+
+  @override
   Widget build(BuildContext context){ // metodo que constrói a tela de busca
     final provider = context.watch<BolsaProvider>(); // contexto que observa o provider de busca para atualizar a tela
 
     return Scaffold( // tela de busca com appBar e body
-      appBar: AppBar( title: const Text("Bolsa Familia 👀")), // appBar com titulo fixo
+      appBar: AppBar( title:  const Text("Bolsa Familia 👀")), // appBar com titulo fixo
       body: Column( // body com coluna para organizar os elementos da tela
         children: [ // lista de elementos da tela
-          Padding(padding: const EdgeInsets.all(8.0), //  padding para criar um espaçamento entre os elementos da tela
+          Padding(padding:  const EdgeInsets.all(8.0), //  padding para criar um espaçamento entre os elementos da tela
           child: Row( // linha para organizar os elementos da tela
             children: [ // lista de elementos da linha
               Expanded(flex: 2, // elemento que ocupa 2/3 da linha
@@ -48,7 +59,7 @@ class _PageOneState extends State<PageOne> { // classe que representa o estado d
                   },
               ),
               ),
-              const SizedBox(width: 8), // espaçamento entre os elementos da linha
+               const SizedBox(width: 8), // espaçamento entre os elementos da linha
               Expanded( // é um widget que ocupa o espaço restante da linha
                 flex: 3, // elemento que ocupa 3/3 da linha
                 child: TextField( // campo de texto para digitar a busca
@@ -56,13 +67,13 @@ class _PageOneState extends State<PageOne> { // classe que representa o estado d
                   decoration: InputDecoration( // decoração do campo de texto
                     labelText: "Escreva aqui!", // label do campo de texto
                     suffixIcon: IconButton( // botão de busca
-                      icon: const Icon(Icons.search), // ícone do botão de busca
+                      icon:  const Icon(Icons.search), // ícone do botão de busca
                       onPressed: () => provider.novaBusca( // metodo que faz a busca
                         _textController.text, // texto do campo de busca
                         _tipoBuscaSelecionado, // tipo de busca selecionado
                         ),
                     ),
-                    border: const OutlineInputBorder(), // borda do campo de texto
+                    border:  const OutlineInputBorder(), // borda do campo de texto
                   ),
                 ),
               ),

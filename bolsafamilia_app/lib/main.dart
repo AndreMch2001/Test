@@ -9,7 +9,7 @@ void main() {
       providers: [
         ChangeNotifierProvider(create: (_) => BolsaProvider()),
       ],
-      child: const MyApp(),
+      child:  MyApp(),
     ),
   );
 }
@@ -22,7 +22,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       theme: ThemeData(primarySwatch: Colors.blue),
-      home: const PageOne(),
+      home:  PageOne(),
     );
   }
 }
