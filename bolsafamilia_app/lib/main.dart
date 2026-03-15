@@ -9,18 +9,20 @@ void main() {
       providers: [
         ChangeNotifierProvider(create: (_) => BolsaProvider()),
       ],
-      child: MyApp(),
+      child: const MyApp(),
     ),
   );
 }
 
 class MyApp extends StatelessWidget {
+  const MyApp({super.key});
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       theme: ThemeData(primarySwatch: Colors.blue),
-      home: PageOne(),
+      home: const PageOne(),
     );
   }
 }
