@@ -149,4 +149,4 @@ A tabela no banco se chama **governo** (mapeada em `Bolsafamiliamodel`).
 
 ## Licença
 
-Uso pessoal/educacional. Ajuste conforme sua necessidade.
+Uso para trabalho de final de semestre da faculdade de ADS !
