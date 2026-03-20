@@ -115,8 +115,8 @@ test/
 ```dart
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
-import 'providers/bolsa_provider.dart';
-import 'views/page_one.dart';
+import '../EXPLANATION/providers/bolsa_provider.dart';
+import '../EXPLANATION/views/page_one.dart';
 
 void main() {
   runApp(

@@ -5,7 +5,7 @@ import '../models/bolsafamilia_model.dart';
 class ApiServices {
   final Dio _dio = Dio();
  
-  final String _url = "http://192.168.1.9:8080/api/Bolsafamiliamodel/busca"; // Pessoal! USEM A SUA IP LOCAL DO SEU COMPUTADOR PARA ACESSAR A API
+  final String _url = "http://192.168.1.5:8080/api/Bolsafamiliamodel/busca"; // Pessoal! USEM A SUA IP LOCAL DO SEU COMPUTADOR PARA ACESSAR A API
 
   Future<List<BolsaFamiliaModel>> getBeneficiarios({ // Usado future para esperar a resposta da API
     String usuarioDigitado = "", // Nome do favorecido, município ou NIS

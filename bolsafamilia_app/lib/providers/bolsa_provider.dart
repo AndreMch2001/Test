@@ -44,5 +44,7 @@ class BolsaProvider with ChangeNotifier { // classe utilizando notifiers para "a
     );
 
     lista.addAll(novosDados); // aqui vai adicionar tudo de dados que foi recebido no carregarMais a lista
+    isLoading = false; // termina o carregamento para esconder o CircularProgressIndicator
     notifyListeners(); // notifica a tela para reconstruir tudo e mostrar os novos dados
-  }}
+  }
+}
