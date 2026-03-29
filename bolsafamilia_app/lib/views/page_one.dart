@@ -19,7 +19,7 @@ class PageOne extends StatefulWidget {
   const PageOne({super.key});
 
   @override
-  _PageOneState createState() => _PageOneState();
+  State<PageOne> createState() => _PageOneState();
 }
 
 class _PageOneState extends State<PageOne> {
@@ -107,7 +107,7 @@ class _PageOneState extends State<PageOne> {
               border: Border.all(color: _AppColors.border),
               boxShadow: [
                 BoxShadow(
-                  color: Colors.black.withOpacity(0.5),
+                  color: Colors.black.withValues(alpha: 0.5),
                   blurRadius: 10,
                   offset: const Offset(0, 4),
                 ),
@@ -240,7 +240,7 @@ class _BeneficiarioCard extends StatelessWidget {
         border: Border.all(color: _AppColors.border),
         boxShadow: [
           BoxShadow(
-            color: Colors.black.withOpacity(0.35),
+            color: Colors.black.withValues(alpha: 0.35),
             blurRadius: 6,
             offset: const Offset(0, 3),
           ),
@@ -293,7 +293,7 @@ class _BeneficiarioCard extends StatelessWidget {
           decoration: BoxDecoration(
             color: _AppColors.accentMuted,
             borderRadius: BorderRadius.circular(8),
-            border: Border.all(color: _AppColors.accent.withOpacity(0.45)),
+            border: Border.all(color: _AppColors.accent.withValues(alpha: 0.45)),
           ),
           child: Text(
             "R\$ ${item.valorParcela ?? "0"}",
