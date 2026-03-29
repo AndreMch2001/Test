@@ -16,6 +16,8 @@ class _AppColors {
 }
 
 class PageOne extends StatefulWidget {
+  const PageOne({super.key});
+
   @override
   _PageOneState createState() => _PageOneState();
 }
@@ -77,8 +79,8 @@ class _PageOneState extends State<PageOne> {
           preferredSize: const Size.fromHeight(1),
           child: Container(height: 1, color: _AppColors.border),
         ),
-        title: Row(
-          children: const [
+        title: const Row(
+          children:[
             Icon(Icons.savings_outlined, color: _AppColors.accent, size: 22),
             SizedBox(width: 8),
             Text(
@@ -116,7 +118,7 @@ class _PageOneState extends State<PageOne> {
                 Expanded(
                   flex: 2,
                   child: DropdownButtonFormField<GetBuscas>(
-                    value: _tipoBuscaSelecionado,
+                    initialValue: _tipoBuscaSelecionado,
                     dropdownColor: _AppColors.surface,
                     style: const TextStyle(color: _AppColors.textPrimary, fontSize: 14),
                     iconEnabledColor: _AppColors.accent,

@@ -11,7 +11,7 @@ void main() async {
       providers: [
         ChangeNotifierProvider(create: (_) => BolsaProvider()),
       ],
-      child:  MyApp(),
+      child:  const MyApp(),
     ),
   );
 }
